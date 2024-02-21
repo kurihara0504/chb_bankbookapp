@@ -29,7 +29,7 @@ jobs:
     - name: Command  mkdir jar	
       run: mkdir jar	
     - name: Command copy JarFile	
-      run: scp -o StrictHostKeyChecking=no -v -i ./.ssh/degital_bankbook.pem  ec2-user@35.79.33.68:/home/ec2-user/jar/bankloanbase-1.1.5-SNAPSHOT.jar ./jar
+      run: scp -o StrictHostKeyChecking=no -v -i ./.ssh/degital_bankbook.pem  ec2-user@35.79.33.68:/home/ec2-user/jar/bankbookbase-1.1.5-SNAPSHOT.jar ./jar
     - name: Command list jar	
       run: ls -laR jar	
     - name: Build with Maven Version	
