@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'icon-download';
+  src:  url('../fonts/download.eot?38way7');
+  src:  url('../fonts/download.eot?38way7#iefix') format('embedded-opentype'),
+    url('../fonts/download.ttf?38way7') format('truetype'),
+    url('../fonts/download.woff?38way7') format('woff'),
+    url('../fonts/download.svg?38way7#download') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-download"], [class*=" icon-download"] {
+  font-family: 'icon-download' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-download-csv:before {
+  content: "\e900";
+}
+.icon-download-pdf:before {
+  content: "\e901";
+}
+
+/* アイコン位置、大きさ調整 */
+.icon-download-csv,.icon-download-pdf {
+	margin-right: 3px;
+	line-height: 36px;
+  font-size: 20px;
+  
+}

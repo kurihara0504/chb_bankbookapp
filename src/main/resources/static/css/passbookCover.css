@@ -1,0 +1,708 @@
+.hyoshi {
+	overflow-y: auto;
+}
+
+.hyoshi_pdftext {
+	font-size: 16px;
+	text-align: left;
+	width: 640px;
+	margin: 15px auto;
+}
+
+/* --------灰色box--------------------------------------- */
+.box1 {
+	padding: 25px 5px;
+	margin: 15px auto;
+	width: 640px;
+	height: 215px;
+	color: #000000;
+	background: #EEEEEE;
+	border: solid 3px #EEEEEE;
+	border-radius: 10px;
+	position: relative;
+}
+
+.p_bank_code {
+  font-size: 16px;
+  text-align: left;
+  width: 100px;
+  margin-left: 420px;
+  position: relative;
+  top: 0px;
+}
+
+.bank_code {
+  font-size: 16px;
+  text-align: left;
+  width: 100px;
+  position: relative;
+  left: 55px;
+  top: 0px;
+}
+
+.p_type, .p_branch_number, .p_branch, .p_branch {
+  font-size: 16px;
+  text-align: left;
+  width: 100px;
+  margin-left: 10px;
+  position: relative;
+  top: -45px;
+  line-height: 30px;
+}
+
+.type {
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+  left: 80px;
+  top: -45px;
+}
+
+.branch_number {
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+  left: 65px;
+  top: -45px;
+}
+
+.branch {
+  width: 505px;
+  height: 40px;
+  position: relative;
+  left: 125px;
+  top: -80px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.branch_name1 {
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+  line-height: 1.0;
+}
+
+.branch_name31 {
+  font-size: 14px;
+  text-align: left;
+  position: relative;
+  line-height: 1.0;
+}
+
+.branch_name52 {
+  font-size: 12px;
+  text-align: left;
+  position: relative;
+  line-height: 1.0;
+}
+
+.branch_name73 {
+  font-size: 10px;
+  text-align: left;
+  position: relative;
+  line-height: 1.2;
+}
+
+.p_number {
+	font-size: 16px;
+  text-align: left;
+  width: 100px;
+  margin-left: 10px;
+  position: relative;
+  top: -105px;
+  line-height: 30px;
+}
+
+.number {
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+  left: 48px;
+  top: -105px;
+}
+
+.name {
+  width: 610px;
+  height: 45px;
+  border-bottom: solid 1px #000000;
+  position: relative;
+  left: 15px;
+  top: -105px;
+  text-align: right;
+  line-height: 1.5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.p_name_kana {
+	font-size: 16px;
+  text-align: left;
+  width: 100px;
+  margin-left: 10px;
+  position: relative;
+  top: -100px;
+  line-height: 30px;
+}
+
+.name_kana65 {
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+}
+
+.name_kana66 {
+  font-size: 14px;
+  text-align: right;
+  position: relative;
+  line-height: 15px;
+}
+
+.name_kana1 {
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+}
+
+.btnCover {
+  width: 640px;
+  height: 36px;
+  position: relative;
+  top: -15px;
+  margin: 0px auto;
+}
+
+.btnCoverDL {
+  background-color: #BB0000;
+  color: #FFFFFF;
+  width: 105px;
+  margin: 0px 0px 0px 542px;
+}
+
+.image_text {
+  padding: 5px;
+  margin: 15px auto;
+  width: 640px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* --------通帳表紙--------------------------------------- */
+.cover {
+	width: 670px;
+	text-align: center;
+	padding-bottom: 50px;
+	position: relative;
+	margin: auto;
+}
+
+.preview_branch_number {
+	position: relative;
+	top: 70px;
+	left: -249px;
+	font-size: 16px;
+	width: 640px;
+}
+
+.preview_number {
+	position: relative;
+	top: 70px;
+	left: -175px;
+	font-size: 16px;
+	width: 640px;
+}
+
+.cover1 {
+	width: 360px;
+	height: 80px;
+	position: absolute;
+	left: 245px;
+	top: 50px;
+	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.preview_user_name1 {
+	font-size: 16px;
+	word-break: break-all;
+	position: relative;
+}
+
+.preview_user_name60 {
+	font-size: 16px;
+	word-break: break-all;
+	position: relative;
+}
+
+.preview_user_name61 {
+	font-size: 14px;
+	word-break: break-all;
+	position: relative;
+}
+
+.cover_img {
+	width: 640px;
+}
+
+.cover_time {
+	margin: 15px auto;
+	font-size: 16px;
+	text-align: right;
+	width: 640px;
+}
+
+/* ------------------------------------------------------------- */
+
+
+/* --------画面縮小時 700px以下----------------------------------- */
+@media screen and (max-width: 700px) {
+	.hyoshi_pdftext {
+		width: 460px;
+	}
+	
+	.box1 {
+	 padding: 10px 5px;
+		width: 450px;
+		height: 310px;
+	}
+
+	.p_bank_code {
+		font-size: 16px;
+		width: 100px;
+		margin-left: 5px;
+		position: relative;
+		top: 0px;
+	}
+
+	.bank_code {
+		font-size: 16px;
+		position: relative;
+		top: 0px;
+		left: 10px;
+	}
+	
+	.p_type, .p_branch_number, .p_branch, .p_branch {
+		font-size: 16px;
+		width: 100px;
+		margin-left: 5px;
+		position: relative;
+		top: 10px;
+		line-height: 40px;
+	}
+
+	.type {
+		font-size: 16px;
+		position: relative;
+		left: 90px;
+		top: 0px;
+	}
+
+	.branch_number {
+		font-size: 16px;
+		position: relative;
+		left: 75px;
+		top: 0px;
+	}
+	
+  .branch {
+    width: 320px;
+    height: 40px;
+    position: relative;
+    left: 130px;
+    top: -35px;
+  }
+  
+  .branch_name1 {
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    line-height: 1.0;
+  }
+  
+  .branch_name31 {
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    line-height: 1.0;
+  }
+  
+  .branch_name52 {
+    font-size: 10px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .branch_name73 {
+    font-size: 8px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .p_number {
+    font-size: 16px;
+    width: 100px;
+    margin-left: 5px;
+    position: relative;
+    top: -50px;
+    line-height: 40px;
+  }
+
+	.number {
+		font-size: 16px;
+		position: relative;
+		left: 58px;
+		top: -50px;
+	}
+
+	.name {
+		width: 430px;
+		position: relative;
+		top: -60px;
+		left: 10px;
+	}
+	
+	.p_name_kana {
+    font-size: 16px;
+    width: 100px;
+    margin-left: 5px;
+    position: relative;
+    top: -50px;
+    line-height: 40px
+	}
+
+	.name_kana65 {
+		font-size: 14px;
+		text-align: right;
+		position: relative;
+	}
+	
+	.name_kana66 {
+		font-size: 10px;
+		text-align: right;
+		position: relative;
+		line-height: 15px;
+	}
+	
+	.name_kana1 {
+		font-size: 14px;
+		text-align: right;
+		position: relative;
+	}
+
+	.btnCover {
+		width: 450px;
+		position: relative;
+		top: -15px;
+	  margin: 0px auto;
+	}
+
+	.btnCoverDL {
+		margin: 0px 0px 0px 353px;
+	}
+
+	.image_text {
+		width: 465px;
+		font-size: 16px;
+	}
+
+	/*-- 通帳表紙  --*/
+	.cover {
+		width: 460px;
+		text-align: center;
+		padding-bottom: 50px;
+		position: relative;
+		margin: auto;
+	}
+
+	.preview_branch_number {
+		font-size: 14px;
+		position: relative;
+		top: 50px;
+		left: -171px;
+	}
+	.preview_number {
+		font-size: 14px;
+		position: relative;
+		top: 50px;
+		left: -124px;
+	}
+	
+	.cover1 {
+		width: 260px;
+		height: 80px;
+		position: absolute;
+		left: 165px;
+		top: 17px;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	.preview_user_name1 {
+		font-size: 14px;
+		word-break: break-all;
+		position: relative;
+	}
+
+	.preview_user_name60 {
+		font-size: 12px;
+		word-break: break-all;
+		position: relative;
+	}
+
+	.preview_user_name61 {
+		font-size: 10px;
+		word-break: break-all;
+		position: relative;
+	}
+
+	.cover_img {
+		width: 460px;
+	}
+	
+	.cover_time {
+		width: 450px;
+		font-size: 16px;
+	}
+}
+
+/* --------画面縮小時 500px以下----------------------------------- */  
+  @media screen and (max-width: 500px) {
+  .hyoshi_pdftext {
+    width: 350px;
+    font-size: 14px;
+  }
+  
+  .box1 {
+   padding: 10px 5px;
+    width: 340px;
+    height: 310px;
+  }
+
+  .p_bank_code {
+    font-size: 14px;
+    width: 100px;
+    margin-left: 5px;
+    position: relative;
+    top: 0px;
+  }
+
+  .bank_code {
+    font-size: 14px;
+    position: relative;
+    top: 0px;
+    left: 20px;
+  }
+  
+  .p_type, .p_branch_number, .p_branch, .p_branch {
+    font-size: 14px;
+    width: 100px;
+    margin-left: 5px;
+    position: relative;
+    top: 10px;
+    line-height: 40px;
+  }
+
+  .type {
+    font-size: 14px;
+    position: relative;
+    left: 90px;
+    top: 9px;
+  }
+
+  .branch_number {
+    font-size: 14px;
+    position: relative;
+    left: 76px;
+    top: 10px;
+  }
+  
+  .branch {
+    width: 220px;
+    height: 40px;
+    position: relative;
+    left: 126px;
+    top: -30px;
+  }
+  
+  .branch_name1 {
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    line-height: 1.0;
+  }
+  
+  .branch_name31 {
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    line-height: 1.0;
+  }
+  
+  .branch_name52 {
+    font-size: 10px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .branch_name73 {
+    font-size: 8px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .p_number {
+    font-size: 14px;
+    width: 100px;
+    margin-left: 5px;
+    position: relative;
+    top: -50px;
+    line-height: 40px;
+  }
+
+  .number {
+    font-size: 14px;
+    position: relative;
+    left: 62px;
+    top: -52px;
+  }
+
+  .name {
+    width: 320px;
+    position: relative;
+    top: -60px;
+    left: 10px;
+  }
+  
+  .p_name_kana {
+    font-size: 14px;
+    width: 100px;
+    margin-left: 5px;
+    position: relative;
+    top: -60px;
+    line-height: 40px
+  }
+
+  .name_kana65 {
+    font-size: 14px;
+    text-align: right;
+    position: relative;
+  }
+  
+  .name_kana66 {
+    font-size: 10px;
+    text-align: right;
+    position: relative;
+    line-height: 15px;
+  }
+  
+  .name_kana1 {
+    font-size: 14px;
+    text-align: right;
+    position: relative;
+  }
+
+  .btnCover {
+    width: 340px;
+    position: relative;
+    top: -15px;
+    margin: 0px auto;
+  }
+
+  .btnCoverDL {
+    margin: 0px 0px 0px 243px;
+  }
+
+  .image_text {
+    width: 350px;
+    font-size: 14px;
+  }
+
+  /*-- 通帳表紙  --*/
+  .cover {
+    width: 350px;
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+    margin: auto;
+  }
+
+  .preview_branch_number {
+    font-size: 14px;
+    position: relative;
+    top: 50px;
+    left: -121px;
+  }
+  .preview_number {
+    font-size: 14px;
+    position: relative;
+    top: 50px;
+    left: -91px;
+  }
+  
+  .cover1 {
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    left:125px;
+    top: 9px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 14px;
+    line-height: 1.0;
+  }
+
+  .preview_user_name1 {
+    font-size: 14px;
+    word-break: break-all;
+    position: relative;
+  }
+
+  .preview_user_name60 {
+    font-size: 12px;
+    word-break: break-all;
+    position: relative;
+  }
+
+  .preview_user_name61 {
+    font-size: 10px;
+    word-break: break-all;
+    position: relative;
+  }
+
+  .cover_img {
+    width: 350px;
+  }
+  
+  .cover_time {
+    width: 340px;
+    font-size: 14px;
+  }
+}
+
+/* --------画面縮小時　ブラウザバリデーション--------------------------------------- */
+/*-- FireFox  --*/
+@-moz-document url-prefix() {
+	.hyoshi {
+		overflow-x: auto;
+		margin: 0px 0px 10px 0px;
+	}
+}
+
+/*-- IE --*/
+@media all and (-ms-high-contrast: none) {
+	.hyoshi {
+		overflow-x: auto;
+		margin: 0px 0px 10px 0px;
+	}
+}
+/* ------------------------------------------------------------- */

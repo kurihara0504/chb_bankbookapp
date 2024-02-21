@@ -1,0 +1,82 @@
+version: "3.3"
+services:
+# DBサーバの設定
+  database:
+    build:  ./mysql/
+    # イメージの指定
+    image: degital-bankbook-db:1.0
+    container_name: degital-bankbook-db
+    # データ保存先の指定
+    volumes:
+      - /var/share/mysql/data/mysql:/var/lib/mysql
+      - /var/share/mysql/blog:/var/log/myblog
+    ports:
+    - "3306:3306"
+    environment:
+      TZ: Asia/Tokyo
+    restart: always
+
+  web-server:
+   # コンテナのリンク指定
+    links:
+    - "database"
+    build: ./jetty/
+    # イメージの指定
+    image: degital-bankbook-web:1.0
+    container_name: degital-bankbook-web
+    tty: true
+    user: jetty
+    # データ保存先の指定
+    volumes:
+      - /var/share/web/jetty:/data
+    # ポート転送設定
+    ports:
+    - "80:8080"
+    # 環境変数の指定
+    environment:
+      MYSQL_HOST: database
+      MYSQL_PORT: 3306
+      MYSQL_USER: mysql
+      MYSQL_PASS: password
+      LOG_LEVEL: debug
+      TZ: Asia/Tokyo
+      JAVA_OPTIONS: '-Xms512M -Xmx512M -XX:ErrorFile=/data/log/hs_err.log'
+      JETTY_BASE: /var/lib/jetty
+      JETTY_HOME: /usr/local/jetty
+    # ログローテート設定
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+    restart: always
+
+  mysql-dump-job:
+   # コンテナのリンク指定
+    links:
+    - "database"
+    build: ./mysqldump/
+    # イメージの指定
+    image: mysql-dump-job:1.0
+    container_name: mysql-dump-job
+    tty: true
+    volumes:
+      - /var/share/mysqldump/backup/data:/opt/mysql/backup/data
+      - ./mysqldump/backup/bin:/opt/mysql/backup/bin
+    # 環境変数の指定
+    environment:
+      MYSQL_HOST: database
+      MYSQL_PORT: 3306
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: mysql
+      TZ: Asia/Tokyo
+    restart: always
+
+  degital-node-red:
+    image: nodered/node-red:latest
+    container_name: degital-node-red
+    ports:
+    - "57423:1880"
+    volumes:
+      - /var/lib/docker/volumes/node_red_user_data/_data/:/data
+    restart: always

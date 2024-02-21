@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'icon-print';
+  src:  url('../fonts/ico_print.eot?e6tdsu');
+  src:  url('../fonts/ico_print.eot?e6tdsu#iefix') format('embedded-opentype'),
+    url('../fonts/ico_print.ttf?e6tdsu') format('truetype'),
+    url('../fonts/ico_print.woff?e6tdsu') format('woff'),
+    url('../fonts/ico_print.svg?e6tdsu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon-print-24px {
+  font-family: 'icon-print' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 24px;
+  vertical-align: -5px;
+  color: #FFFFFF;
+}
+
+.icon-print-24px:before {
+  content: "\e900";
+}

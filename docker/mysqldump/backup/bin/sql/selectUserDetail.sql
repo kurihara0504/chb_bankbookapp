@@ -1,0 +1,1 @@
+SELECT id,user_id,child_user_id,insert_datetime,update_datetime FROM bankbook.userdetail ORDER BY user_id,child_user_id ASC;

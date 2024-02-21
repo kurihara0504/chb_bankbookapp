@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LoanPaymentPlan3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="from" class="java.lang.String"/>
+	<parameter name="to" class="java.lang.String"/>
+	<parameter name="branchNumber" class="java.lang.String"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<parameter name="accountNumber" class="java.lang.String"/>
+	<parameter name="userNameKana" class="java.lang.String"/>
+	<parameter name="displayTransactions" class="java.lang.Boolean">
+        <defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+    </parameter>
+    <parameter name="coverTime" class="java.lang.String"/>
+	<queryString>
+    <![CDATA[]]>
+  </queryString>
+  <field name="tradingDay" class="java.lang.String"/>
+  <field name="content" class="java.lang.String"/>
+  <field name="paymentAmount" class="java.lang.String"/>
+  <field name="withdrawalAmount" class="java.lang.String"/>
+  <field name="memo" class="java.lang.String"/>
+  <field name="balance" class="java.lang.String"/>
+  <!-- ヘッダー  -->
+  <title>
+     <band height="200" splitType="Stretch">
+       <property name="com.jaspersoft.studio.layout"/>
+       <!-- タイトル  -->
+       <staticText>
+         <reportElement mode="Opaque" x="0" y="0" width="550" height="20"/>
+         <textElement textAlignment="Center" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="20"/>
+         </textElement>
+         <text><![CDATA[取引明細照会]]></text>
+       </staticText>
+       <!-- 銀行名  -->
+       <staticText>
+         <reportElement mode="Opaque" x="380" y="40" width="120" height="20"/>
+         <textElement textAlignment="Right" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[千葉銀行]]></text>
+       </staticText>
+       <!-- 店番号  -->
+       <staticText>
+         <reportElement mode="Opaque" x="53" y="60" width="90" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[店番号]]></text>
+       </staticText>
+       <textField isBlankWhenNull="true">
+         <reportElement mode="Opaque" x="155" y="60" width="350" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <textFieldExpression><![CDATA[$P{branchNumber}]]></textFieldExpression>
+       </textField>
+       <!-- 店名  -->
+       <staticText>
+         <reportElement mode="Opaque" x="53" y="80" width="90" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[店名]]></text>
+       </staticText>
+       <textField isBlankWhenNull="true">
+         <reportElement key="fontsize_branch" mode="Opaque" x="155" y="80" width="350" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <textFieldExpression><![CDATA[$P{branchName}]]></textFieldExpression>
+       </textField>
+       <!-- 口座番号  -->
+       <staticText>
+         <reportElement mode="Opaque" x="53" y="100" width="90" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[口座番号]]></text>
+       </staticText>
+       <textField isBlankWhenNull="true">
+         <reportElement mode="Opaque" x="155" y="100" width="90" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <textFieldExpression><![CDATA[$P{accountNumber}]]></textFieldExpression>
+       </textField>
+       <!-- 科目  -->
+       <staticText>
+         <reportElement mode="Opaque" x="53" y="120" width="90" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[科目]]></text>
+       </staticText>
+       <staticText>
+         <reportElement mode="Opaque" x="155" y="120" width="90" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[貯蓄預金]]></text>
+       </staticText>
+       <!-- お名前（カナ）  -->
+       <staticText>
+         <reportElement mode="Opaque" x="53" y="140" width="105" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[お名前（カナ）]]></text>
+       </staticText>
+       <textField isBlankWhenNull="true">
+         <reportElement key="fontsize_user_name_kana" mode="Opaque" x="155" y="140" width="350" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <textFieldExpression><![CDATA[$P{userNameKana}]]></textFieldExpression>
+       </textField>
+       <!-- 照会期間  -->
+       <staticText>
+         <reportElement mode="Opaque" x="100" y="180" width="100" height="20" />
+         <textElement textAlignment="Right" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <text><![CDATA[照会期間]]></text>
+       </staticText>
+       <textField isBlankWhenNull="true">
+         <reportElement mode="Opaque" x="220" y="180" width="200" height="20" />
+         <textElement textAlignment="Left" verticalAlignment="Middle">
+           <font fontName="IPAexg" size="14"/>
+         </textElement>
+         <textFieldExpression><![CDATA[$P{from} + " 〜 " + $P{to}]]></textFieldExpression>
+       </textField>
+     </band>
+  </title>
+  <!-- 明細部  -->
+  <columnHeader>
+    <band height="20" splitType="Stretch">
+      <staticText>
+        <reportElement mode="Opaque" x="53" y="0" width="55" height="20" backcolor="#F0F0F0"/>
+        <box>
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <text><![CDATA[年月日]]></text>
+      </staticText>
+      <staticText>
+        <reportElement mode="Opaque" x="108" y="0" width="90" height="20" backcolor="#F0F0F0"/>
+        <box>
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <text><![CDATA[お支払い金額]]></text>
+      </staticText>
+      <staticText>
+        <reportElement mode="Opaque" x="198" y="0" width="90" height="20" backcolor="#F0F0F0"/>
+        <box>
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <text><![CDATA[お預り金額]]></text>
+      </staticText>
+      <staticText>
+        <reportElement mode="Opaque" x="288" y="0" width="125" height="20" backcolor="#F0F0F0"/>
+        <box>
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <text><![CDATA[お取引内容]]></text>
+      </staticText>
+      <staticText>
+        <reportElement mode="Opaque" x="413" y="0" width="90" height="20" backcolor="#F0F0F0"/>
+        <box>
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <text><![CDATA[差引残高]]></text>
+      </staticText>
+    </band>
+  </columnHeader>
+  <detail>
+    <!-- 明細がない場合  -->
+    <band height="25" splitType="Stretch">
+      <printWhenExpression><![CDATA[$P{displayTransactions}? false: true]]></printWhenExpression>
+      <staticText>
+        <reportElement mode="Opaque" x="225" y="5" width="100" height="20"/>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <text><![CDATA[明細データがありません。]]></text>
+      </staticText>
+    </band>
+    <!-- 明細がある場合  -->
+    <band height="25" splitType="Stretch">
+      <printWhenExpression><![CDATA[$P{displayTransactions}? true: false]]></printWhenExpression>
+      <textField isBlankWhenNull="true">
+        <reportElement x="53" y="0" width="55" height="25"/>
+        <box leftPadding="0">
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{tradingDay}]]></textFieldExpression>
+      </textField>
+      <textField isBlankWhenNull="true">
+        <reportElement x="108" y="0" width="90" height="25"/>
+        <box rightPadding="2">
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Right" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{paymentAmount}]]></textFieldExpression>
+      </textField>
+      <textField isBlankWhenNull="true">
+        <reportElement x="198" y="0" width="90" height="25"/>
+        <box rightPadding="2">
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Right" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{withdrawalAmount}]]></textFieldExpression>
+      </textField>
+      <textField isBlankWhenNull="true">
+        <reportElement x="288" y="0" width="125" height="25"/>
+        <box leftPadding="2" rightPadding="2">
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{content}]]></textFieldExpression>
+      </textField>
+      <textField isBlankWhenNull="true">
+        <reportElement x="413" y="0" width="90" height="25"/>
+        <box rightPadding="2">
+          <pen lineWidth="0.5"/>
+        </box>
+        <textElement textAlignment="Right" verticalAlignment="Middle">
+          <font fontName="IPAexg" size="8"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+      </textField>
+    </band>
+  </detail>
+  
+  <!-- ページ数表示  -->
+  <pageFooter>
+    <band height="20">
+      <property name="com.jaspersoft.studio.unit.height" value="px"/>
+      <textField>
+        <reportElement x="388" y="0" width="100" height="20">
+          <property name="com.jaspersoft.studio.unit.height" value="px"/>
+        </reportElement>
+        <textElement textAlignment="Right"/>
+        <textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+      </textField>
+      <textField evaluationTime="Report">
+        <reportElement x="488" y="0" width="66" height="20">
+          <property name="com.jaspersoft.studio.unit.height" value="px"/>
+        </reportElement>
+        <textElement textAlignment="Left"/>
+        <textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+      </textField>
+    </band>
+  </pageFooter>  
+  
+  <!-- タイムスタンプ表示  -->
+  <summary>
+    <band height="70">
+      <textField>
+	    <reportElement x="230" y="20" width="274" height="20" />
+	    <textElement textAlignment="Right"><font fontName="IPAexg" size="13" isBold="false"/></textElement>
+	    <textFieldExpression><![CDATA[$P{coverTime}]]></textFieldExpression>
+	  </textField>
+    </band>  
+  </summary>
+</jasperReport>

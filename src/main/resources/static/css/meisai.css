@@ -1,0 +1,296 @@
+/* --------口座明細共通設定--------------------------------------- */
+/* 残高時間用 */
+.time1 {
+  font-size: 13px;
+  margin: -15px 10px 15px;
+}
+
+/* 明細時間用 */
+.time2 {
+  font-size: 13px;
+  margin: -30px 10px 0px;
+}
+
+/* 科目表示用 */
+.kamoku {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* 残高表示用 */
+.zandaka {
+  font-size: 28px;
+  text-align: center;
+}
+
+/* 年月選択フィールド用 */
+.nengappi {
+  margin: auto;
+  min-width: 200px;
+  white-space: nowrap;
+}
+
+/* 年月選択コンテンツ用 */
+.nengappiCon {
+  font-size: 16px;
+  margin: 10px;
+}
+
+/* 取引明細用 */
+.meisai {
+  overflow-y: auto;
+  margin: 0px 10px 0px;
+}
+
+/* 取引明細テーブル用 */
+.meisaiTable {
+  table-layout: fixed;
+}
+
+/* 取引明細テーブルヘッダ用 */
+.meisaiTableHead {
+  background-color: #f5f5f5;
+}
+
+.dateHead {
+  width: 110px;
+  text-align: center;
+}
+
+.dateData {
+  font-size: 14px;
+  text-align: left;
+}
+
+.moneyHead {
+  width: 150px;
+  text-align: center;
+}
+
+.moneyData {
+  font-size: 14px;
+  text-align: right;
+}
+
+.textHeadLarge {
+  width: 250px;
+  text-align: center;
+}
+
+.textDataLarge {
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 14px;
+  text-align: left;
+}
+
+.textHeadMemo {
+  width: 300px;
+  text-align: center;
+}
+
+.textDataMemo {
+  font-size: 14px;
+  text-align: left;
+  white-space: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+
+.mdl-button--raised:active {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  background-color: rgba(158, 158, 158, 0.40);
+}
+
+.mdl-data-table {
+  width: 100%;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
+}
+
+.mdl-data-table thead {
+  padding-bottom: 3px;
+}
+
+.mdl-data-table tbody tr {
+  position: relative;
+  height: 48px;
+  transition-duration: 0.28s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+}
+
+.mdl-data-table td, .mdl-data-table th {
+  padding: 0px 15px 0px 0px;
+}
+
+.mdl-data-table td:first-of-type, .mdl-data-table th:first-of-type {
+  padding-left: 24px;
+}
+
+.mdl-data-table td:last-of-type, .mdl-data-table th:last-of-type {
+  padding-right: 24px;
+}
+
+.mdl-data-table td {
+  word-break: break-all;
+  position: relative;
+  vertical-align: middle;
+  height: 48px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-top: 12px;
+  box-sizing: border-box;
+}
+
+.mdl-data-table th {
+  position: relative;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0;
+  height: 48px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+/* ------------------------------------------------------------- */
+/* --------口座明細（普通預金）専用設定------------------------------ */
+.accountItem_M {
+  background-color: #FFFFFF;
+  margin: auto;
+  max-width: 1200px;
+  min-width: 310px;
+  padding: 10px 0px 0px;
+}
+/* ------------------------------------------------------------- */
+/* --------口座明細（貯蓄預金）専用設定------------------------------ */
+.accountItem_S {
+  background-color: #FFFFFF;
+  margin: auto;
+  max-width: 950px;
+  min-width: 310px;
+  padding: 10px 0px 0px;
+}
+/* ------------------------------------------------------------- */
+/* --------口座明細（定期預金）専用設定------------------------------ */
+/* 定期預金のみwidthが170px */
+#page_teikiYokin .textHeadLarge {
+  width: 170px;
+  text-align: center;
+}
+
+#page_teikiYokin .textDataLarge {
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* 定期預金のみwidthが150px */
+#page_teikiYokin .moneyHead {
+  width: 150px;
+  text-align: center;
+}
+
+.textHeadMedium {
+  width: 130px;
+  text-align: center;
+}
+
+.textDataMedium {
+  font-size: 14px;
+  text-align: left;
+}
+
+.textHeadSmall {
+  width: 100px;
+  text-align: center;
+}
+
+.textDataSmall {
+  font-size: 14px;
+  text-align: left;
+}
+
+.riHead {
+  width: 80px;
+  text-align: center;
+}
+
+.riData {
+  font-size: 14px;
+  text-align: right;
+}
+
+.blank {
+  width: 20px;
+  text-align: center;
+}
+
+/* 口座明細（定期預金） */
+.accountItem_L {
+  background-color: #FFFFFF;
+  margin: auto;
+  max-width: 1130px;
+  min-width: 310px;
+  padding: 10px 0px 0px;
+}
+/* ------------------------------------------------------------- */
+
+.pulldown {
+	font-size: 16px;
+	border: #ccc 2px solid;
+	border-radius: 4px;
+	margin: 0px 0px 14px 0px;
+}
+
+.start_end_month {
+	font-size: 16px;
+	text-align: left;
+	margin: 0px 0px 0px 80px;
+}
+
+.meisai_pdftext {
+	font-size: 16px;
+	text-align: left;
+	width: 360px;
+	margin: 15px auto;
+}
+
+.btnMeisaiDL {
+	display: block;
+	position: relative;
+  top: -48px;
+	margin: 0 10px 0 auto;
+}
+
+/* ---画面縮小時--- */
+@media screen and (max-width: 700px) {
+	.btnMeisaiDL {
+    top: -48px;
+	  margin: 48px 10px 0 auto;
+　　}
+
+  .accountItem_L {
+    max-width: 700px;
+    min-width: 310px;
+  }
+}
