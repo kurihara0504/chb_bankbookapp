@@ -27,7 +27,7 @@
 		<repository>
 			<id>com.moneyforward</id>
 			<name>bankbookbase</name>
-		<--	<url>http://18.182.136.24:88/maven/</url> -->
+		<!--	<url>http://18.182.136.24:88/maven/</url> -->
 			<url>https://github.com/kurihara0504/</url>
 		</repository>
 	</repositories>
@@ -37,7 +37,7 @@
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
 		</dependency>
-		<--
+		<!--
 		<dependency>
 			<groupId>com.moneyforward</groupId>
 			<artifactId>bankbookbase</artifactId>
