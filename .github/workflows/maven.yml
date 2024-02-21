@@ -1,0 +1,50 @@
+#---------------------------------------------	
+# 千葉 プロジェクト千葉銀行用	
+#  build-chb_bankloanapp	
+#---------------------------------------------	
+name: Java_CI_with_Maven(chb_bankloanapp)	
+on:	
+  push:	
+    branches: [ "dev" ]	
+  pull_request:	
+    branches: [ "dev" ]	
+  workflow_dispatch:	
+jobs:	
+  build-chb_bankloanapp:	
+    runs-on: ubuntu-latest	
+    steps:	
+    - uses: actions/checkout@v3	
+    - name: Set up JDK 17	
+      uses: actions/setup-java@v3	
+      with:	
+        java-version: '17'	
+        distribution: 'temurin'	
+        cache: maven	
+    - name: Command pwd	
+      run: pwd	
+    - name: Command list ./	
+      run: ls -laR ./	
+    - name: Command  chmod 	
+      run: chmod 600 ./.ssh/degital_bankbook.pem	
+    - name: Command  mkdir jar	
+      run: mkdir jar	
+    - name: Command copy JarFile	
+      run: scp -o StrictHostKeyChecking=no -v -i ./.ssh/degital_bankbook.pem  ec2-user@35.79.33.68:/home/ec2-user/jar/bankloanbase-1.1.5-SNAPSHOT.jar ./jar
+    - name: Command list jar	
+      run: ls -laR jar	
+    - name: Build with Maven Version	
+      run: mvn --version	
+#    - name: Build with Maven Clean	
+#      run: mvn clean	
+    - name: Build with Maven compile	
+      run: mvn compile	
+    - name: Build with Maven package	
+      run: mvn package -Dmaven.test.skip=true --file pom.xml	
+    - name: Build with Maven install	
+      run: mvn install -Dmaven.test.skip=true	
+    - name: commmand Pwd	
+      run: pwd	
+    - name: commmand ls(./target)	
+      run: ls -laR target	
+    - name: scp ls(sp2.war To IT Server)	
+      run: scp -o StrictHostKeyChecking=no -v -i ./.ssh/degital_bankbook.pem ./target/sp2.war ec2-user@35.79.33.68:/home/ec2-user/chb_deploy	
