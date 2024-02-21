@@ -49,7 +49,7 @@
 			<artifactId>bankloanbase</artifactId>
 			<version>1.1.5</version>
 			<scope>system</scope>
-			<systemPath>/home/runner/work/chb_bankloanapp/chb_bankloanapp/jar/bankloanbase-1.1.5-SNAPSHOT.jar</systemPath>
+			<systemPath>/home/runner/work/chb_bankbookapp/chb_bankbookapp/jar/bankbookbase-1.1.5-SNAPSHOT.jar</systemPath>
 		</dependency>	
 			
 	</dependencies>
