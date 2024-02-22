@@ -50,8 +50,29 @@
 			<version>1.1.5</version>
 			<scope>system</scope>
 			<systemPath>/home/runner/work/chb_bankbookapp/chb_bankbookapp/jar/bankbookbase-1.1.5-SNAPSHOT.jar</systemPath>
-		</dependency>	
-			
+		</dependency>
+		<dependency>		
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			</dependency>
+		<dependency>			
+			<groupId>org.springframework.boot</groupId>			
+			<artifactId>spring-boot-starter-web</artifactId>			
+		</dependency>			
+		<dependency>		
+			<groupId>org.springframework.boot</groupId>	
+			<artifactId>spring-boot-starter-data-jpa</artifactId>	
+		</dependency>		
+		<dependency>			
+			<groupId>commons-collections</groupId>		
+			<artifactId>commons-collections</artifactId>		
+			<version>3.2.2</version>		
+		</dependency>			
+		<dependency>			
+			<groupId>org.apache.commons</groupId>		
+			<artifactId>commons-lang3</artifactId>		
+			<version>3.1</version>		
+		</dependency>			
 	</dependencies>
 	<build>
 		<plugins>
